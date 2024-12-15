@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration</title>
+    <script src="script.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: white;
+        }
+
+        .start-button-container {
+            text-align: center;
+        }
+
+        .start-button {
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            background-color: orange;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .start-button:hover {
+            background-color: darkorange;
+        }
+
+        .registration-form-container {
+            display: none;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: lightgray;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .registration-form-container h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: black;
+        }
+
+        .registration-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .registration-form label {
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: black;
+            text-align: left;
+        }
+
+        .registration-form input, .registration-form select {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid gray;
+            border-radius: 4px;
+            font-size: 16px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .avatar-preview {
+            display: none;
+            margin-left: 10px;
+            width: 30px;
+            height: 30px;
+            object-fit: cover;
+            border: 1px solid gray;
+            border-radius: 4px;
+        }
+
+        .register-button {
+            padding: 10px;
+            background-color: orange;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .register-button:hover {
+            background-color: darkorange;
+        }
+
+        .password-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .password-container input {
+            flex: 1;
+            margin: 0;
+        }
+
+        .generate-button {
+            margin-left: 5px;
+            padding: 10px 12px;
+            font-size: 14px;
+            background-color: gray;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        .generate-button:hover {
+            background-color: darkorange;
+        }
+
+        select {
+            appearance: auto;
+            padding: 10px;
+            border: 1px solid gray;
+            border-radius: 4px;
+            font-size: 16px;
+            width: 100%;
+            box-sizing: border-box;
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="start-button-container">
+        <button class="start-button" id="startButton">Sign in</button>
+    </div>
+    
+    <div class="registration-form-container" id="registrationFormContainer">
+        <h2>Registration Form</h2>
+        <form class="registration-form" id="registrationForm">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+            
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+    
+            <label for="nickname">Nickname:</label>
+            <input type="text" id="nickname" name="nickname" placeholder="Enter your nickname" required>
+    
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+    
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+    
+            <label for="avatar">Upload Avatar:</label>
+            <div style="display: flex; align-items: center;">
+                <input type="file" id="avatar" name="avatar" accept="image/*">
+                <img id="avatarPreview" class="avatar-preview" alt="Avatar Preview">
+            </div>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            
+            <label for="password">Password:</label>
+            <div class="password-container">
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                <button type="button" id="generatePassword" class="generate-button">Generate</button>
+            </div>
+            
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+        
+            <button type="submit" class="register-button">Sign in</button>
+        </form>
+    </div>
+</body>
+</html>
