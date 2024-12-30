@@ -1,0 +1,213 @@
+body#index {
+    margin: 0;
+    padding: 0;
+    font-family: "Arial", sans-serif;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.registration-form-container {
+    width: 90%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.registration-form-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.registration-form-container h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #333;
+}
+
+.registration-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+    font-weight: bold;
+}
+
+.registration-form input,
+.registration-form select {
+    display: block;
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.registration-form input:focus,
+.registration-form select:focus {
+    border-color: #6a11cb;
+    box-shadow: 0 0 5px rgba(106, 17, 203, 0.5);
+}
+
+.password-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.avatar-preview {
+    display: none;
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+}
+
+.generate-button {
+    margin-left: 5px;
+    padding: 10px 12px;
+    font-size: 14px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    height: 100%;
+    box-sizing: border-box;
+    transition: background 0.3s ease;
+}
+
+.generate-button:hover {
+    background-color: #0056b3;
+}
+
+.register-button {
+    padding: 12px;
+    background: #007bff;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.register-button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+.registration-form input.error,
+.registration-form select.error {
+    border-color: #e74c3c;
+    box-shadow: 0 0 5px rgba(231, 76, 60, 0.5);
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 13px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+body#userinfo {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: rgb(247, 248, 252);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: rgb(51, 51, 51);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+.logout {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: rgb(255, 107, 107);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.logout:hover {
+    background-color: rgb(255, 76, 76);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(255, 107, 107, 0.3);
+}
+
+.profile-container {
+    margin: 20px auto;
+    text-align: left;
+    display: block;
+    background: rgb(255, 255, 255);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+.profile-container p {
+    font-size: 18px;
+    margin: 10px 0;
+    color: rgb(68, 68, 68);
+}
+
+.profile-container strong {
+    font-weight: bold;
+    color: rgb(34, 34, 34);
+}
+
+.avatar-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.avatar-container img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgb(221, 221, 221);
+    transition: border-color 0.3s ease;
+}
+
+.avatar-container img:hover {
+    border-color: rgb(255, 107, 107);
+}

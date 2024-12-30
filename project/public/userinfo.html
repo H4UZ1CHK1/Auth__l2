@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Info</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", async function () {
+            try {
+                const response = await fetch('http://localhost:5000/data');
+                if (!response.ok) {
+                    console.error("Ошибка получения данных");
+                    return;
+                }
+    
+                const data = await response.json();
+                const lastEntry = data[data.length - 1]; 
+    
+                if (lastEntry) {
+                    document.getElementById("name").textContent = lastEntry.firstName + " " + lastEntry.lastName;
+                    document.getElementById("nickname").textContent = lastEntry.nickname;
+                    document.getElementById("email").textContent = lastEntry.email;
+                    document.getElementById("phone").textContent = lastEntry.phone;
+                    document.getElementById("gender").textContent = lastEntry.gender;
+                    document.getElementById("date").textContent = lastEntry.date;
+                }
+            } catch (error) {
+                console.error("Ошибка загрузки данных", error);
+            }
+        });
+    </script>       
+</head>
+<body id="userinfo">
+    <div class="container">
+        <a href="index.html" class="logout" onclick="logout()">Log out</a>
+        <h1>About me</h1>
+        <div class="profile-container">
+            <div class="avatar-container">
+                <img id="avatar" src="" alt="Avatar">
+            </div>
+            <p><strong>Name:</strong> <span id="name"></span></p>
+            <p><strong>Nickname:</strong> <span id="nickname"></span></p>
+            <p><strong>Email:</strong> <span id="email"></span></p>
+            <p><strong>Phone:</strong> <span id="phone"></span></p>
+            <p><strong>Gender:</strong> <span id="gender"></span></p>
+            <p><strong>Date:</strong> <span id="date"></span></p>
+        </div>
+    </div>
+</body>
+</html>
+
